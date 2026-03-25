@@ -1,3 +1,4 @@
+// this is the main function where it creates the receipt
 function createReceipt() {
     let name = document.getElementById("Pname").value;
     let idNum = document.getElementById("IDnumber").value;
@@ -30,7 +31,7 @@ function createReceipt() {
             return false;
         }
 
-
+    // this is to calculate the price without discount
     function calculateSubtotal(service, session) {
             let price;
             switch (service) {
@@ -52,6 +53,7 @@ function createReceipt() {
                 return price * session;
             }
         }
+// this is to calculate the price with a discount (if needed) 
     function calculateDiscount(total, customerType) {
             let discount;
             switch (customerType) {
